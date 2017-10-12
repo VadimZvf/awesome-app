@@ -6,5 +6,5 @@ import auth from './features/auth/reducer';
 export default combineReducers({
     routing: routerReducer,
     auth,
-    ...walletReducer
+    ...walletReducer('wallet')
 });
