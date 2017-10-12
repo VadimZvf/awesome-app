@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import Wallet from 'chunk-wallet';
+import Wallet from './features/wallet';
 import DefaultLayout from './layouts';
 import { Login, ensure as onlyAuth } from './features/auth';
 import NotFound from './features/not-found';
