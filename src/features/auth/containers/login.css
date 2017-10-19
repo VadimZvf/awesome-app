@@ -1,0 +1,17 @@
+.login {
+    &__form {
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+        margin-top: 80px;
+    }
+
+    &__input {
+        margin-top: 10px;
+    }
+
+    &__submit {
+        float: right;
+        margin-top: 10px;
+    }
+}

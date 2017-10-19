@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { string, func } from 'prop-types';
 import { connect } from 'react-redux';
 import autobind from 'autobind-decorator';
-
+import { Input, Button } from 'antd';
+import './login.css';
 import login from '../actions/login';
 
 const defaultErrors = { username: null, password: null };
@@ -31,17 +32,15 @@ class Login extends Component {
         const { username, password, errors } = this.state;
         const { error } = this.props;
         return (
-            <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" name="username" value={username} onChange={this.handleChange} />
-                    { errors.username && <span>{ errors.username }</span> }
-                    <br />
-                    <input type="password" name="password" value={password} onChange={this.handleChange} />
-                    { errors.password && <span>{ errors.password }</span> }
-                    <br />
-                    { error && <div>{error}</div> }
-                    <button type="submit">Войти</button>
-                </form>
+            <div className="login__form">
+                <Input className="login__input" type="text" name="username" placeholder="login" value={username} onChange={this.handleChange} />
+                { errors.username && <span>{ errors.username }</span> }
+                <br />
+                <Input className="login__input" type="password" name="password" placeholder="password" value={password} onChange={this.handleChange} />
+                { errors.password && <span>{ errors.password }</span> }
+                <br />
+                { error && <div>{error}</div> }
+                <Button className="login__submit" onClick={this.handleSubmit}>Войти</Button>
             </div>
         );
     }

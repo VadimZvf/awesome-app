@@ -1,20 +1,24 @@
 import React from 'react';
 import { node } from 'prop-types';
+import { Layout } from 'antd';
 import Header from './components/header';
 import Footer from './components/footer';
+import './index.css';
 
-const Layout = props => {
+const Wrapper = props => {
     return (
-        <section>
+        <Layout className="layout">
             <Header />
-            { props.children }
+            <Layout.Content className="layout__content">
+                { props.children }
+            </Layout.Content>
             <Footer />
-        </section>
+        </Layout>
     );
 };
 
-Layout.propTypes = {
+Wrapper.propTypes = {
     children: node
 };
 
-export default Layout;
+export default Wrapper;
