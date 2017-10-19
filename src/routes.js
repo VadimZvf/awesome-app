@@ -11,6 +11,7 @@ export default function () {
             <IndexRoute component={Login} />
         </Route>,
         <Route path="/" component={onlyAuth(DefaultLayout, { redirectTo: '/login' })}>
+            <IndexRoute component={Wallet} />
             <Route path="wallet">
                 <IndexRoute component={Wallet} />
             </Route>
