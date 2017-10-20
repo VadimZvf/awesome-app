@@ -10,7 +10,9 @@ export default function (ImportPromise) {
             ImportPromise().then(component => {
                 this.setState({ component: <component.default /> });
             }).catch(err => {
+                /* eslint-disable no-console */
                 console.error(err);
+                /* eslint-enable no-console */
                 this.setState({ component: 'Ошибка загрузки' });
             });
         }
