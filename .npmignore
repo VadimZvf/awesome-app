@@ -10,3 +10,4 @@ develop
 .eslintrc
 .gitignore
 .npmignore
+.firebaserc

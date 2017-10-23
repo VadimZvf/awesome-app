@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import { Layout, Menu } from 'antd';
 
 const Header = () => (
@@ -10,7 +11,9 @@ const Header = () => (
             defaultSelectedKeys={['Wallet']}
             style={{ lineHeight: '64px' }}
         >
-            <Menu.Item key="Wallet">Wallet</Menu.Item>
+            <Menu.Item key="Wallet">
+                <Link to="/wallet">Wallet</Link>
+            </Menu.Item>
         </Menu>
     </Layout.Header>
 );

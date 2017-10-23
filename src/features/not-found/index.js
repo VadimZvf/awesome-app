@@ -1,1 +1,8 @@
-export default () => '404: Not Found';
+import React from 'react';
+import './index.css';
+
+export default () => (
+    <div className="not-found">
+        <h1>404: Not Found</h1>
+    </div>
+);

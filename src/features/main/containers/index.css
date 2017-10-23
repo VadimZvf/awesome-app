@@ -1,0 +1,41 @@
+.main {
+    margin-top: 200px;
+
+    h1 {
+        text-align: center;
+    }
+
+    &__widgets {
+        max-width: 300px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    &__widget {
+        position: relative;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        padding: 4px;
+        background-color: #dddddd;
+        border-radius: 6px;
+        text-align: center;
+        font-size: 1.4rem;
+        color: white;
+
+        &:hover {
+            color: white;
+            background-color: #108ee9;
+            transition: background-color 0.2s;
+        }
+    }
+
+    &__widget-name {
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+        font-size: 0.8rem;
+        color: rgba(0, 0, 0, 0.85);
+        left: 0;
+    }
+}
